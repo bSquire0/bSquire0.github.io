@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ben Squire — Software Engineer. Building elegant, performant digital experiences.">
+  <title>Ben Squire</title>
+
+  <!-- Google Fonts: Playfair Display (serif) + Inter (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       CURSOR — custom follower dot
+  ═══════════════════════════════════════ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <!-- Brand / Initials -->
+      <a href="#hero" class="nav-brand" aria-label="Go to top">BS</a>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1"  x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3"  y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════
+         01 · HERO
+    ═══════════════════════════════════════ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <!-- Ambient background orbs -->
+      <div class="hero-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <!-- Grid overlay -->
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="hero-greeting reveal-up delay-1">Hello, I'm</p>
+
+        <h1 class="hero-name reveal-up delay-2">
+          Ben <em>Squire</em>
+        </h1>
+
+        <p class="hero-role reveal-up delay-3">
+          I <span class="typewriter" id="typewriter" aria-live="polite"></span>
+        </p>
+
+        <p class="hero-tagline reveal-up delay-4">
+          Software engineer crafting thoughtful, performant experiences<br class="br-md">
+          at the intersection of engineering and design.
+        </p>
+
+        <div class="hero-actions reveal-up delay-5">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact"  class="btn btn-ghost">Let's talk</a>
+        </div>
+      </div>
+
+      <!-- Scroll nudge -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         02 · ABOUT
+    ═══════════════════════════════════════ -->
+    <section id="about" class="section" aria-label="About me">
+      <div class="container">
+
+        <header class="section-header reveal-element">
+          <span class="section-number" aria-hidden="true">01</span>
+          <span class="section-kicker">About</span>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="heading-xl reveal-element">
+              Building software<br>that <em>matters</em>
+            </h2>
+            <!-- ✏️ CUSTOMIZE: Edit your personal bio below -->
+            <p class="body-lg reveal-element">
+              I'm a software engineer with a passion for creating clean, scalable, and beautiful digital experiences. I believe great software lives at the intersection of technical rigour and thoughtful design.
+            </p>
+            <p class="body-lg reveal-element">
+              When I'm not writing code, I'm exploring emerging technologies, contributing to open source, or thinking about how software shapes the way we interact with the world.
+            </p>
+            <!-- ✏️ CUSTOMIZE: Update your resume link -->
+            <a href="#" class="btn btn-ghost reveal-element" style="margin-top: var(--space-6);">
+              Download CV →
+            </a>
+          </div>
+
+          <!-- Stats cards -->
+          <div class="about-stats">
+            <!-- ✏️ CUSTOMIZE: Update these numbers -->
+            <div class="stat-card glass-card reveal-element">
+              <span class="stat-value">5+</span>
+              <span class="stat-label">Years experience</span>
+            </div>
+            <div class="stat-card glass-card reveal-element">
+              <span class="stat-value">30+</span>
+              <span class="stat-label">Projects shipped</span>
+            </div>
+            <div class="stat-card glass-card reveal-element">
+              <span class="stat-value">∞</span>
+              <span class="stat-label">Coffees consumed</span>
+            </div>
+            <div class="stat-card glass-card reveal-element">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">Committed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         03 · EXPERIENCE
+    ═══════════════════════════════════════ -->
+    <section id="experience" class="section section-alt" aria-label="Work experience">
+      <div class="container">
+
+        <header class="section-header reveal-element">
+          <span class="section-number" aria-hidden="true">02</span>
+          <span class="section-kicker">Experience</span>
+        </header>
+
+        <h2 class="heading-xl reveal-element">Where I've worked</h2>
+
+        <!-- ✏️ CUSTOMIZE: Replace with your real experience -->
+        <ol class="timeline" role="list">
+
+          <li class="timeline-item reveal-element">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <article class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Senior Software Engineer</h3>
+                  <p class="timeline-company">Company Name</p>
+                </div>
+                <time class="timeline-period">2022 — Present</time>
+              </div>
+              <p class="timeline-body">
+                Led development of core platform features serving millions of users. Architected scalable microservices, mentored junior engineers, and drove key technical decisions that reduced system latency by 40%.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Python</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">AWS</li>
+                <li class="tag">React</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal-element">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <article class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Software Engineer</h3>
+                  <p class="timeline-company">Previous Company</p>
+                </div>
+                <time class="timeline-period">2020 — 2022</time>
+              </div>
+              <p class="timeline-body">
+                Built and maintained full-stack applications, collaborated closely with product and design, and implemented automated testing that improved coverage from 45% to 85%.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">Node.js</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">Docker</li>
+                <li class="tag">Vue.js</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item reveal-element">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <article class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Junior Developer</h3>
+                  <p class="timeline-company">Startup Name</p>
+                </div>
+                <time class="timeline-period">2019 — 2020</time>
+              </div>
+              <p class="timeline-body">
+                Developed features for a B2B SaaS product in an agile environment, gaining foundational skills in modern web development practices and ship-fast culture.
+              </p>
+              <ul class="tag-list" aria-label="Technologies used">
+                <li class="tag">JavaScript</li>
+                <li class="tag">React</li>
+                <li class="tag">REST APIs</li>
+              </ul>
+            </article>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         04 · PROJECTS
+    ═══════════════════════════════════════ -->
+    <section id="projects" class="section" aria-label="Featured projects">
+      <div class="container">
+
+        <header class="section-header reveal-element">
+          <span class="section-number" aria-hidden="true">03</span>
+          <span class="section-kicker">Projects</span>
+        </header>
+
+        <h2 class="heading-xl reveal-element">Selected work</h2>
+
+        <!-- ✏️ CUSTOMIZE: Replace with your real projects -->
+        <div class="projects-grid">
+
+          <article class="project-card glass-card reveal-element" aria-label="Project: Example App">
+            <div class="project-top">
+              <span class="project-glyph" aria-hidden="true">⬡</span>
+              <div class="project-links">
+                <a href="https://github.com/bsquire0" class="icon-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.562 21.8 24 17.302 24 12 24 5.373 18.627 0 12 0z"/>
+                  </svg>
+                </a>
+                <a href="#" class="icon-link" target="_blank" rel="noopener" aria-label="View live site">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Project Alpha</h3>
+            <p class="project-desc">
+              A full-stack platform solving X problem with an elegant, scalable approach. Built with performance and developer experience as first-class concerns.
+            </p>
+            <ul class="stack-list" aria-label="Tech stack">
+              <li class="stack-tag">React</li>
+              <li class="stack-tag">Python</li>
+              <li class="stack-tag">PostgreSQL</li>
+            </ul>
+          </article>
+
+          <article class="project-card glass-card reveal-element" aria-label="Project: Open Source Tool">
+            <div class="project-top">
+              <span class="project-glyph" aria-hidden="true">◈</span>
+              <div class="project-links">
+                <a href="https://github.com/bsquire0" class="icon-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.562 21.8 24 17.302 24 12 24 5.373 18.627 0 12 0z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Open Source Tool</h3>
+            <p class="project-desc">
+              A developer tool that automates repetitive workflows. Gained 500+ GitHub stars and is used by engineers worldwide to save hours each week.
+            </p>
+            <ul class="stack-list" aria-label="Tech stack">
+              <li class="stack-tag">TypeScript</li>
+              <li class="stack-tag">Node.js</li>
+              <li class="stack-tag">Redis</li>
+            </ul>
+          </article>
+
+          <article class="project-card glass-card reveal-element" aria-label="Project: Data Dashboard">
+            <div class="project-top">
+              <span class="project-glyph" aria-hidden="true">◎</span>
+              <div class="project-links">
+                <a href="https://github.com/bsquire0" class="icon-link" target="_blank" rel="noopener" aria-label="View on GitHub">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.562 21.8 24 17.302 24 12 24 5.373 18.627 0 12 0z"/>
+                  </svg>
+                </a>
+                <a href="#" class="icon-link" target="_blank" rel="noopener" aria-label="View live site">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/>
+                    <line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Analytics Dashboard</h3>
+            <p class="project-desc">
+              A data-driven application visualizing complex datasets in intuitive, interactive dashboards with real-time streaming updates and export capabilities.
+            </p>
+            <ul class="stack-list" aria-label="Tech stack">
+              <li class="stack-tag">Python</li>
+              <li class="stack-tag">D3.js</li>
+              <li class="stack-tag">FastAPI</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <div class="projects-footer reveal-element">
+          <a href="https://github.com/bsquire0" class="btn btn-ghost" target="_blank" rel="noopener">
+            View all on GitHub →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         05 · SKILLS
+    ═══════════════════════════════════════ -->
+    <section id="skills" class="section section-alt" aria-label="Skills and technologies">
+      <div class="container">
+
+        <header class="section-header reveal-element">
+          <span class="section-number" aria-hidden="true">04</span>
+          <span class="section-kicker">Skills</span>
+        </header>
+
+        <h2 class="heading-xl reveal-element">What I work with</h2>
+
+        <!-- ✏️ CUSTOMIZE: Edit skill tags to match your actual skills -->
+        <div class="skills-grid">
+
+          <div class="skill-group reveal-element">
+            <h3 class="skill-group-label">Frontend</h3>
+            <ul class="skill-tags" role="list">
+              <li class="skill-tag">React</li>
+              <li class="skill-tag">TypeScript</li>
+              <li class="skill-tag">Next.js</li>
+              <li class="skill-tag">CSS / Sass</li>
+              <li class="skill-tag">Vue.js</li>
+              <li class="skill-tag">Tailwind</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal-element">
+            <h3 class="skill-group-label">Backend</h3>
+            <ul class="skill-tags" role="list">
+              <li class="skill-tag">Python</li>
+              <li class="skill-tag">Node.js</li>
+              <li class="skill-tag">FastAPI</li>
+              <li class="skill-tag">PostgreSQL</li>
+              <li class="skill-tag">Redis</li>
+              <li class="skill-tag">GraphQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal-element">
+            <h3 class="skill-group-label">Infrastructure</h3>
+            <ul class="skill-tags" role="list">
+              <li class="skill-tag">AWS</li>
+              <li class="skill-tag">Docker</li>
+              <li class="skill-tag">Kubernetes</li>
+              <li class="skill-tag">Terraform</li>
+              <li class="skill-tag">CI/CD</li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal-element">
+            <h3 class="skill-group-label">Practices</h3>
+            <ul class="skill-tags" role="list">
+              <li class="skill-tag">System Design</li>
+              <li class="skill-tag">TDD</li>
+              <li class="skill-tag">Code Review</li>
+              <li class="skill-tag">Agile / Scrum</li>
+              <li class="skill-tag">API Design</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         06 · CONTACT
+    ═══════════════════════════════════════ -->
+    <section id="contact" class="section section-contact" aria-label="Contact">
+      <div class="container">
+
+        <header class="section-header reveal-element">
+          <span class="section-number" aria-hidden="true">05</span>
+          <span class="section-kicker">Contact</span>
+        </header>
+
+        <div class="contact-body">
+          <h2 class="contact-heading reveal-element">
+            Let's build something<br><em>remarkable</em> together.
+          </h2>
+          <p class="contact-sub reveal-element">
+            I'm open to new opportunities and interesting conversations.<br>
+            Whether you have a project in mind or just want to say hello&thinsp;—&thinsp;reach out.
+          </p>
+
+          <!-- ✏️ CUSTOMIZE: Replace with your actual email -->
+          <div class="contact-cta reveal-element">
+            <a href="mailto:hello@example.com" class="btn btn-primary btn-lg">
+              Say Hello →
+            </a>
+          </div>
+
+          <!-- ✏️ CUSTOMIZE: Update social links -->
+          <nav class="social-links reveal-element" aria-label="Social links">
+            <a href="https://github.com/bsquire0"           class="social-link" target="_blank" rel="noopener">GitHub</a>
+            <span class="social-dot" aria-hidden="true">·</span>
+            <a href="https://linkedin.com/in/bensquire"     class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="social-dot" aria-hidden="true">·</span>
+            <a href="https://twitter.com/bsquire0"          class="social-link" target="_blank" rel="noopener">Twitter</a>
+          </nav>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Designed &amp; built by <strong>Ben Squire</strong></span>
+      <span class="footer-year">© 2025</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
